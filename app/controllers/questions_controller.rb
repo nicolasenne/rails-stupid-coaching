@@ -7,8 +7,8 @@ class QuestionsController < ApplicationController
     @ask = params[:ask]
 
     # TODO: return coach answer to your_message, with additional custom rules of yours!
-    if @ask == "I am going to work right now!" || @ask == "I am going to work right now!".upcase
-      return @answer = ""
+    if @ask == "I am going to work now!" || @ask == "I am going to work right now!".upcase
+      return @answer = "Perfect!"
     elsif @ask == @ask.upcase && @ask.include?("?")
       return @answer = "I can feel your motivation! Silly question, get dressed and go to work!"
     elsif @ask.include?("?")
